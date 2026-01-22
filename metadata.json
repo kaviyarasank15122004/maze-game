@@ -1,0 +1,5 @@
+{
+  "name": "Neon Maze Runner",
+  "description": "A minimalist, high-performance 2D maze game featuring procedural generation, adaptive difficulty, and mobile-friendly touch controls.",
+  "requestFramePermissions": []
+}

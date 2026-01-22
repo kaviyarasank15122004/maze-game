@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Maze Runner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow: hidden;
+            touch-action: none;
+            margin: 0;
+            padding: 0;
+        }
+        .maze-grid {
+            display: grid;
+            gap: 0;
+            user-select: none;
+        }
+        .cell {
+            box-sizing: border-box;
+            transition: background-color 0.2s ease;
+        }
+        .wall-top { border-top: 2px solid #334155; }
+        .wall-right { border-right: 2px solid #334155; }
+        .wall-bottom { border-bottom: 2px solid #334155; }
+        .wall-left { border-left: 2px solid #334155; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.95); }
+        }
+        .player-anim {
+            animation: pulse 1s infinite ease-in-out;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
